@@ -3,11 +3,11 @@ import { Route } from "@angular/router";
 export const routes: Route[] = [
   {
     path: "home",
-    loadComponent: () => import("./home/home.component"),
+    loadComponent: () => import("@quicklist-signals/home"),
   },
   {
     path: "checklist/:id",
-    loadComponent: () => import("./checklist/checklist.component"),
+    loadComponent: () => import("@quicklist-signals/checklist"),
   },
   {
     path: "",

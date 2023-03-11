@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { RouterModule } from "@angular/router";
-import { ChecklistItemService } from "./checklist/data-access/checklist-item.service";
-import { ChecklistService } from "./shared/data-access/checklist.service";
+import { ChecklistItemService } from "@quicklist-signals/checklist/data-access";
+import { ChecklistService } from "@quicklist-signals/shared/data-access";
 
 @Component({
   standalone: true,
@@ -10,10 +10,12 @@ import { ChecklistService } from "./shared/data-access/checklist.service";
   template: ` <router-outlet></router-outlet> `,
 })
 export class AppComponent implements OnInit {
+  constructor(
+    private checklistService: ChecklistService,
+    private checklistItemService: ChecklistItemService
+  ) {}
 
-  constructor(private checklistService: ChecklistService, private checklistItemService: ChecklistItemService){}
-
-  ngOnInit(){
+  ngOnInit() {
     this.checklistService.load();
     this.checklistItemService.load();
   }

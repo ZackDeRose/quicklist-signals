@@ -1,0 +1,20 @@
+{
+  "name": "checklist",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/checklist/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "projects/checklist/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

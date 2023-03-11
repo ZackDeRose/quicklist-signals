@@ -1,0 +1,20 @@
+{
+  "name": "shared-interfaces",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/shared/interfaces/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "projects/shared/interfaces/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

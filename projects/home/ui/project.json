@@ -1,0 +1,20 @@
+{
+  "name": "home-ui",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/home/ui/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "projects/home/ui/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

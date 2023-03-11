@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -19,10 +18,25 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"],
+    "paths": {
+      "@quicklist-signals/checklist": [
+        "projects/checklist/src/lib/checklist.component.ts"
+      ],
+      "@quicklist-signals/checklist/data-access": [
+        "projects/checklist/data-access/src/index.ts"
+      ],
+      "@quicklist-signals/checklist/ui": ["projects/checklist/ui/src/index.ts"],
+      "@quicklist-signals/home": ["projects/home/src/lib/home.component.ts"],
+      "@quicklist-signals/home/ui": ["projects/home/ui/src/index.ts"],
+      "@quicklist-signals/shared/data-access": [
+        "projects/shared/data-access/src/index.ts"
+      ],
+      "@quicklist-signals/shared/interfaces": [
+        "projects/shared/interfaces/src/index.ts"
+      ],
+      "@quicklist-signals/shared/ui": ["projects/shared/ui/src/index.ts"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
